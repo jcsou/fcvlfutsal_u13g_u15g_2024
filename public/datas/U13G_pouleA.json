@@ -1,0 +1,150 @@
+{
+  "lesequipes": [
+    "U13G1",
+    "U13G2",
+    "U13G3",
+    "U13G4"
+  ],
+  "lesmatchs": [
+    {
+      "id": 1,
+      "salle": "1-GLC",
+      "heureDebut": "14:10",
+      "equipeDom": {"id": "U13G1","but": ""},
+      "equipeExt": {"id": "U13G2","but": ""}
+    },
+    {
+      "id": 3,
+      "salle": "1-GLC",
+      "heureDebut": "14:20",
+      "equipeDom": {"id": "U13G3","but": ""},
+      "equipeExt": {"id": "U13G4","but": ""}
+    },
+    {
+      "id": 9,
+      "salle": "1-GLC",
+      "heureDebut": "14:50",
+      "equipeDom": {"id": "U13G2","but": ""},
+      "equipeExt": {"id": "U13G4","but": ""}
+    },
+    {
+      "id": 11,
+      "salle": "1-GLC",
+      "heureDebut": "15:00",
+      "equipeDom": {"id": "U13G1","but": ""},
+      "equipeExt": {"id": "U13G3","but": ""}
+    },
+    {
+      "id": 17,
+      "salle": "2-CCVL",
+      "heureDebut": "15:30",
+      "equipeDom": {"id": "U13G2","but": ""},
+      "equipeExt": {"id": "U13G3","but": ""}
+    },
+    {
+      "id": 19,
+      "salle": "2-CCVL",
+      "heureDebut": "15:40",
+      "equipeDom": {"id": "U13G4","but": ""},
+      "equipeExt": {"id": "U13G1","but": ""}
+    }
+  ],
+  "leclassement": [
+    {
+      "id":"U13G1",
+      "rang": "",
+      "points": "",
+      "diffbuts": "",
+      "butsPour": "",
+      "butsContre": "",
+      "sep":"-----------------",
+      "match1": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      },
+      "match2": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      },
+      "match3": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      }
+    },
+    {
+      "id":"U13G2",
+      "rang": "",
+      "points": "",
+      "diffbuts": "",
+      "butsPour": "",
+      "butsContre": "",
+      "sep":"-----------------",
+      "match1": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      },
+      "match2": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      },
+      "match3": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      }
+    },
+    {
+      "id":"U13G3",
+      "rang": "",
+      "points": "",
+      "diffbuts": "",
+      "butsPour": "",
+      "butsContre": "",
+      "sep":"-----------------",
+      "match1": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      },
+      "match2": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      },
+      "match3": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      }
+    },
+    {
+      "id":"U13G4",
+      "rang": "",
+      "points": "",
+      "diffbuts": "",
+      "butsPour": "",
+      "butsContre": "",
+      "sep":"-----------------",
+      "match1": {
+        "points": "4",
+        "butsPour": "",
+        "butsContre": ""
+      },
+      "match2": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      },
+      "match3": {
+        "points": "",
+        "butsPour": "",
+        "butsContre": ""
+      }
+    }
+  ]
+}

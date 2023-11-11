@@ -1,0 +1,151 @@
+{
+  "tournoi": {
+    "titre": "Tournoi en salle U13G/U15G",
+    "date": "Samedi 06/01/2024",
+    "temps_jeu": "Temps de jeu 8 minutes. Rotation toutes les 10 minutes",
+    "lien_reglement": "pdf/01_ReglementTournoi2024.pdf",
+    "lien_site": "https://www.tes.fcvalduloir.live/TES2024U13gU15g/dist/",
+    "titre_QRcode": "TournoiEnSalle FCVL U13G/U15G"
+  },
+  "lessalles": [
+    {
+      "id": "1-GLC",
+      "nomlong": "Gymnase Guy La Croix",
+      "lien": "img/salles/1-GLC-int.png"
+    },
+    {
+      "id": "2-CCVL",
+      "nomlong": "Gymnase CC Val du Loir",
+      "lien": "img/salles/2-CCVL.png"
+    }
+  ],
+  "lescategories": [
+    {
+      "id": "cat1",
+      "categorie_id": "U13G",
+      "nomlong": "U13 Garçons",
+      "texthoraire": "Rdv 13h30 - Début 14h10"
+    },
+    {
+      "id": "cat2",
+      "categorie_id": "U15G",
+      "nomlong": "U15 Garçons",
+      "texthoraire": "Rdv 13h30 - Début 14h10"
+    }
+  ],
+  "lesequipes": [
+     {
+      "categorie_id": "U13G",
+      "id": "U13G1",
+      "nom": "district13g1",
+      "nomCourt": "district13g1",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U13G",
+      "id": "U13G2",
+      "nom": "district13g2",
+      "nomCourt": "district13g2",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U13G",
+      "id": "U13G3",
+      "nom": "district13g3",
+      "nomCourt": "district13g3",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U13G",
+      "id": "U13G4",
+      "nom": "district13g4",
+      "nomCourt": "district13g4",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U13G",
+      "id": "U13G5",
+      "nom": "district13g5",
+      "nomCourt": "district13g5",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U13G",
+      "id": "U13G6",
+      "nom": "district13g6",
+      "nomCourt": "district13g7",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U13G",
+      "id": "U13G7",
+      "nom": "district13g7",
+      "nomCourt": "district13g7",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U13G",
+      "id": "U13G8",
+      "nom": "district13g8",
+      "nomCourt": "district13g8",
+      "fanion": "district.png"
+    },
+
+    {
+      "categorie_id": "U15G",
+      "id": "U15G1",
+      "nom": "district15g1",
+      "nomCourt": "district15g1",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U15G",
+      "id": "U15G2",
+      "nom": "district15g2",
+      "nomCourt": "district15g2",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U15G",
+      "id": "U15G3",
+      "nom": "district15g3",
+      "nomCourt": "district15g3",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U15G",
+      "id": "U15G4",
+      "nom": "district15g4",
+      "nomCourt": "district15g4",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U15G",
+      "id": "U15G5",
+      "nom": "district15g5",
+      "nomCourt": "district15g5",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U15G",
+      "id": "U15G6",
+      "nom": "district15g6",
+      "nomCourt": "district15g6",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U15G",
+      "id": "U15G7",
+      "nom": "district15g7",
+      "nomCourt": "district15g7",
+      "fanion": "district.png"
+    },
+    {
+      "categorie_id": "U15G",
+      "id": "U15G8",
+      "nom": "district15g8",
+      "nomCourt": "district15g8",
+      "fanion": "district.png"
+    }
+  ]
+}
