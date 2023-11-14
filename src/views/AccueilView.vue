@@ -217,11 +217,12 @@ export default {
 
         equipes1: null,
         equipes2: null,
-        cat1: null,
-        cat2: null,
-        salle1: null,
-        salle2: null,
-        tournoi: null,
+        cat1: '{"id": "", "categorie_id": "", "nomlong": "", "texthoraire": ""}',
+        cat2: '{"id": "", "categorie_id": "", "nomlong": "", "texthoraire": ""}',
+        salle1: '{"id": "", "nomlong": "", "lien": ""}',
+        salle2: '{"id": "", "nomlong": "", "lien": ""}',
+        tournoi: '{"titre": "", "date": "", "temps_jeu": "", "lien_reglement": "", "lien_site": "", "titre_QRcode": ""}',
+
       };
     },
     created() {

@@ -24,7 +24,7 @@
         </v-list-item-title>
       </v-list-item>
       <v-list-item>
-        <v-list-item-subtitle>Futsal U13/U15G</v-list-item-subtitle>
+        <v-list-item-subtitle>Futsal U13G/U15G</v-list-item-subtitle>
       </v-list-item>
     </v-list>
 

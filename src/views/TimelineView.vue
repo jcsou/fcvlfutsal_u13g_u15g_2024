@@ -109,20 +109,14 @@ export default {
         c1_categorie: "U13G",
         c2_categorie: "U15G",
 
-        url_c1_PouleA: process.env.BASE_URL + "datas/U13G_pouleA.json",
-        url_c1_PouleB: process.env.BASE_URL + "datas/U13G_pouleB.json",
-        url_c2_PouleA: process.env.BASE_URL + "datas/U15G_pouleA.json",
-        url_c2_PouleB: process.env.BASE_URL + "datas/U15G_pouleB.json",
+        url_Poule: process.env.BASE_URL + "datas/matchs_poules.json",
 
         url_c1_finales: process.env.BASE_URL + "datas/U13G_finales.json",
         url_c2_finales: process.env.BASE_URL + "datas/U15G_finales.json",
 
         urlEquipe: process.env.BASE_URL + "datas/info_tournoi.json",
 
-        lesmatchs_c1_pA: [],
-        lesmatchs_c1_pB: [],
-        lesmatchs_c2_pA: [],
-        lesmatchs_c2_pB: [],
+        lesmatchs: [],
 
         lesmatchs_c1_final: [],
         lesmatchs_c2_final: [],
@@ -195,69 +189,18 @@ export default {
                  console.log(error)
               });
 
-            // Load c1_PoulesA
-            var url_c1_PouleA = this.url_c1_PouleA;
+
+            var url_Poule = this.url_Poule;
             axios
-                .get(url_c1_PouleA)
+                .get(url_Poule)
                 .then(response => {
-                  this.lesmatchs_c1_pA = response.data.lesmatchs
+                  this.lesmatchs = response.data.lesmatchs
 
-                  for (var n in this.lesmatchs_c1_pA ) {
-                    this.lesmatchs_c1_pA[n].score = this.lesmatchs_c1_pA[n].equipeDom.but+" - "+this.lesmatchs_c1_pA[n].equipeExt.but
-                    this.lesmatchs_c1_pA[n].displayDom = this.lesequipeskey[this.lesmatchs_c1_pA[n].equipeDom.id]
-                    this.lesmatchs_c1_pA[n].displayExt = this.lesequipeskey[this.lesmatchs_c1_pA[n].equipeExt.id]
-                    this.lesmatchs_c1_pA[n].categorie = this.c1_categorie + " / Poule A"
-                  }
-                }).catch(error => {
-                   console.log(error)
-                })
-
-            // Load c1_PoulesB
-            var url_c1_PouleB = this.url_c1_PouleB;
-            axios
-                .get(url_c1_PouleB)
-                .then(response => {
-                  this.lesmatchs_c1_pB = response.data.lesmatchs
-
-                  for (var n in this.lesmatchs_c1_pB ) {
-                    this.lesmatchs_c1_pB[n].score = this.lesmatchs_c1_pB[n].equipeDom.but+" - "+this.lesmatchs_c1_pB[n].equipeExt.but
-                    this.lesmatchs_c1_pB[n].displayDom = this.lesequipeskey[this.lesmatchs_c1_pB[n].equipeDom.id]
-                    this.lesmatchs_c1_pB[n].displayExt = this.lesequipeskey[this.lesmatchs_c1_pB[n].equipeExt.id]
-                    this.lesmatchs_c1_pB[n].categorie = this.c1_categorie + " / Poule B"
-                  }
-                }).catch(error => {
-                   console.log(error)
-                })
-
-            // Load c2_PouleA
-            var url_c2_PouleA = this.url_c2_PouleA;
-            axios
-                .get(url_c2_PouleA)
-                .then(response => {
-                  this.lesmatchs_c2_pA = response.data.lesmatchs
-
-                  for (var n in this.lesmatchs_c2_pA ) {
-                    this.lesmatchs_c2_pA[n].score = this.lesmatchs_c2_pA[n].equipeDom.but+" - "+this.lesmatchs_c2_pA[n].equipeExt.but
-                    this.lesmatchs_c2_pA[n].displayDom = this.lesequipeskey[this.lesmatchs_c2_pA[n].equipeDom.id]
-                    this.lesmatchs_c2_pA[n].displayExt = this.lesequipeskey[this.lesmatchs_c2_pA[n].equipeExt.id]
-                    this.lesmatchs_c2_pA[n].categorie = this.c2_categorie + " / Poule A"
-                  }
-                }).catch(error => {
-                   console.log(error)
-                })
-
-            // Load c2_PouleB
-            var url_c2_PouleB = this.url_c2_PouleB;
-            axios
-                .get(url_c2_PouleB)
-                .then(response => {
-                  this.lesmatchs_c2_pB = response.data.lesmatchs
-
-                  for (var n in this.lesmatchs_c2_pB ) {
-                    this.lesmatchs_c2_pB[n].score = this.lesmatchs_c2_pB[n].equipeDom.but+" - "+this.lesmatchs_c2_pB[n].equipeExt.but
-                    this.lesmatchs_c2_pB[n].displayDom = this.lesequipeskey[this.lesmatchs_c2_pB[n].equipeDom.id]
-                    this.lesmatchs_c2_pB[n].displayExt = this.lesequipeskey[this.lesmatchs_c2_pB[n].equipeExt.id]
-                    this.lesmatchs_c2_pB[n].categorie = this.c2_categorie + " / Poule B"
+                  for (var n in this.lesmatchs ) {
+                    this.lesmatchs[n].score = this.lesmatchs[n].equipeDom.but+" - "+this.lesmatchs[n].equipeExt.but
+                    this.lesmatchs[n].displayDom = this.lesequipeskey[this.lesmatchs[n].equipeDom.id]
+                    this.lesmatchs[n].displayExt = this.lesequipeskey[this.lesmatchs[n].equipeExt.id]
+                    this.lesmatchs[n].categorie = this.lesmatchs[n].categorie_id + " / Poule " + this.lesmatchs[n].poule
                   }
                 }).catch(error => {
                    console.log(error)
@@ -321,7 +264,7 @@ export default {
     },
     computed: {
         getMatchs() {
-            var lesmatchs = this.lesmatchs_c1_pA.concat(this.lesmatchs_c1_pB).concat(this.lesmatchs_c2_pA).concat(this.lesmatchs_c2_pB)
+            var lesmatchs = this.lesmatchs
             for (var n in lesmatchs) {
                 lesmatchs[n].keytime = lesmatchs[n].heureDebut.replace(":", "")
             }

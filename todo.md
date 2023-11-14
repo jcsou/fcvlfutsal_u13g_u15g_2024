@@ -26,3 +26,10 @@ From src :
 	"rules": {
       "vue/multi-word-component-names": "off"
     }
+
+=> vue.config.js
+==> module.exports
+===>
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/fcvlfutsal_u13g_u15g_2024/dist/'
+    : '/',

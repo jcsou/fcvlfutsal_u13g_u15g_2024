@@ -34,133 +34,118 @@
     }
   ],
   "lesequipes": [
-    {
+     {
       "categorie_id": "U13G",
       "id": "U13G1",
       "nom": "district13g1",
       "nomCourt": "district13g1",
-      "fanion": "district.png",
-      "poule": "PA"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U13G",
       "id": "U13G2",
       "nom": "district13g2",
       "nomCourt": "district13g2",
-      "fanion": "district.png",
-      "poule": "PA"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U13G",
       "id": "U13G3",
       "nom": "district13g3",
       "nomCourt": "district13g3",
-      "fanion": "district.png",
-      "poule": "PA"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U13G",
       "id": "U13G4",
       "nom": "district13g4",
       "nomCourt": "district13g4",
-      "fanion": "district.png",
-      "poule": "PA"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U13G",
       "id": "U13G5",
       "nom": "district13g5",
       "nomCourt": "district13g5",
-      "fanion": "district.png",
-      "poule": "PB"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U13G",
       "id": "U13G6",
       "nom": "district13g6",
-      "nomCourt": "district13g6",
-      "fanion": "district.png",
-      "poule": "PB"
+      "nomCourt": "district13g7",
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U13G",
       "id": "U13G7",
       "nom": "district13g7",
       "nomCourt": "district13g7",
-      "fanion": "district.png",
-      "poule": "PB"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U13G",
       "id": "U13G8",
       "nom": "district13g8",
       "nomCourt": "district13g8",
-      "fanion": "district.png",
-      "poule": "PB"
+      "fanion": "district.png"
     },
+
     {
       "categorie_id": "U15G",
       "id": "U15G1",
       "nom": "district15g1",
       "nomCourt": "district15g1",
-      "fanion": "district.png",
-      "poule": "PA"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U15G",
       "id": "U15G2",
       "nom": "district15g2",
       "nomCourt": "district15g2",
-      "fanion": "district.png",
-      "poule": "PA"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U15G",
       "id": "U15G3",
       "nom": "district15g3",
       "nomCourt": "district15g3",
-      "fanion": "district.png",
-      "poule": "PA"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U15G",
       "id": "U15G4",
       "nom": "district15g4",
       "nomCourt": "district15g4",
-      "fanion": "district.png",
-      "poule": "PA"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U15G",
       "id": "U15G5",
       "nom": "district15g5",
       "nomCourt": "district15g5",
-      "fanion": "district.png",
-      "poule": "PB"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U15G",
       "id": "U15G6",
       "nom": "district15g6",
       "nomCourt": "district15g6",
-      "fanion": "district.png",
-      "poule": "PB"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U15G",
       "id": "U15G7",
       "nom": "district15g7",
       "nomCourt": "district15g7",
-      "fanion": "district.png",
-      "poule": "PB"
+      "fanion": "district.png"
     },
     {
       "categorie_id": "U15G",
       "id": "U15G8",
       "nom": "district15g8",
       "nomCourt": "district15g8",
-      "fanion": "district.png",
-      "poule": "PB"
+      "fanion": "district.png"
     }
   ]
 }

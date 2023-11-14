@@ -1,11 +1,18 @@
 {
-  "lesequipes": [
-    "U13G5",
-    "U13G6",
-    "U13G7",
-    "U13G8"
-  ],
   "lesmatchs": [
+    {
+      "id": "1",
+      "salle": "1-GLC",
+      "heureDebut": "14:10",
+      "equipeDom": {
+        "id": "U13G1",
+        "but": ""
+      },
+      "equipeExt": {
+        "id": "U13G2",
+        "but": "1"
+      }
+    },
     {
       "id": 2,
       "salle": "2-CCVL",

@@ -1,0 +1,898 @@
+{
+  "lesmatchs": [
+    {
+      "id": "1",
+      "salle": "1-GLC",
+      "heureDebut": "14:10",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U13G1",
+        "nomCourt": "dist13g1",
+        "pt": "1",
+        "but": "0"
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g2",
+        "id": "U13G2",
+        "pt": "4",
+        "but": "1"
+      }
+    },
+    {
+      "id": "2",
+      "salle": "2-CCVL",
+      "heureDebut": "14:10",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U13G5",
+        "nomCourt": "dist13g5",
+        "pt": "4",
+        "but": "5"
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g6",
+        "id": "U13G6",
+        "pt": "1",
+        "but": "0"
+      }
+    },
+    {
+      "id": "3",
+      "salle": "1-GLC",
+      "heureDebut": "14:20",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U13G3",
+        "nomCourt": "dist13g3",
+        "pt": "2",
+        "but": "2"
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g4",
+        "id": "U13G4",
+        "pt": "2",
+        "but": "2"
+      }
+    },
+    {
+      "id": "4",
+      "salle": "2-CCVL",
+      "heureDebut": "14:20",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U13G7",
+        "nomCourt": "dist13g7",
+        "pt": "4",
+        "but": "4"
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g8",
+        "id": "U13G8",
+        "pt": "1",
+        "but": "1"
+      }
+    },
+    {
+      "id": "5",
+      "salle": "1-GLC",
+      "heureDebut": "14:30",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U15G1",
+        "nomCourt": "rict15g1",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "rict15g2",
+        "id": "U15G2",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "6",
+      "salle": "2-CCVL",
+      "heureDebut": "14:30",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U15G5",
+        "nomCourt": "rict15g5",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "rict15g6",
+        "id": "U15G6",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "7",
+      "salle": "1-GLC",
+      "heureDebut": "14:40",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U15G3",
+        "nomCourt": "rict15g3",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "rict15g4",
+        "id": "U15G4",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "8",
+      "salle": "2-CCVL",
+      "heureDebut": "14:40",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U15G7",
+        "nomCourt": "rict15g7",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "rict15g8",
+        "id": "U15G8",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "9",
+      "salle": "1-GLC",
+      "heureDebut": "14:50",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U13G2",
+        "nomCourt": "dist13g2",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g4",
+        "id": "U13G4",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "10",
+      "salle": "2-CCVL",
+      "heureDebut": "14:50",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U13G6",
+        "nomCourt": "dist13g6",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g8",
+        "id": "U13G8",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "11",
+      "salle": "1-GLC",
+      "heureDebut": "15:00",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U13G1",
+        "nomCourt": "dist13g1",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g3",
+        "id": "U13G3",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "12",
+      "salle": "2-CCVL",
+      "heureDebut": "15:00",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U13G5",
+        "nomCourt": "dist13g5",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g7",
+        "id": "U13G7",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "13",
+      "salle": "1-GLC",
+      "heureDebut": "15:10",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U15G2",
+        "nomCourt": "rict15g2",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "rict15g4",
+        "id": "U15G4",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "14",
+      "salle": "2-CCVL",
+      "heureDebut": "15:10",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U15G6",
+        "nomCourt": "rict15g6",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "rict15g8",
+        "id": "U15G8",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "15",
+      "salle": "1-GLC",
+      "heureDebut": "15:20",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U15G1",
+        "nomCourt": "rict15g1",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "rict15g3",
+        "id": "U15G3",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "16",
+      "salle": "2-CCVL",
+      "heureDebut": "15:20",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U15G5",
+        "nomCourt": "rict15g5",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g7",
+        "id": "U15G7",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "17",
+      "salle": "1-GLC",
+      "heureDebut": "15:30",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U13G7",
+        "nomCourt": "dist13g7",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g6",
+        "id": "U13G6",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "18",
+      "salle": "2-CCVL",
+      "heureDebut": "15:30",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U13G2",
+        "nomCourt": "dist13g2",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g3",
+        "id": "U13G3",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "19",
+      "salle": "1-GLC",
+      "heureDebut": "15:40",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U13G8",
+        "nomCourt": "dist13g8",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g5",
+        "id": "U13G5",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "20",
+      "salle": "2-CCVL",
+      "heureDebut": "15:40",
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U13G4",
+        "nomCourt": "dist13g4",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g1",
+        "id": "U13G1",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "21",
+      "salle": "1-GLC",
+      "heureDebut": "15:50",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U15G7",
+        "nomCourt": "dist13g7",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g6",
+        "id": "U15G6",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "22",
+      "salle": "2-CCVL",
+      "heureDebut": "15:50",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U15G2",
+        "nomCourt": "dist13g2",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g3",
+        "id": "U15G3",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "23",
+      "salle": "1-GLC",
+      "heureDebut": "16:00",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PB",
+      "equipeDom": {
+        "id": "U15G8",
+        "nomCourt": "dist13g8",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g5",
+        "id": "U15G5",
+        "pt": "",
+        "but": ""
+      }
+    },
+    {
+      "id": "24",
+      "salle": "2-CCVL",
+      "heureDebut": "16:00",
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PA",
+      "equipeDom": {
+        "id": "U15G4",
+        "nomCourt": "dist13g4",
+        "pt": "",
+        "but": ""
+      },
+      "equipeExt": {
+        "nomCourt": "dist13g1",
+        "id": "U15G1",
+        "pt": "",
+        "but": ""
+      }
+    }
+  ],
+  "lesclassements": [
+    {
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PA",
+      "leclassement": [
+        {
+          "id": "U13G1",
+          "nomCourt": "dist13g1",
+          "rang": "4",
+          "points": "1",
+          "butsdiff": "-1",
+          "butspour": "0",
+          "butscontre": "1",
+          "match1": {
+            "points": "1",
+            "butspour": "0",
+            "butscontre": "1"
+          },
+          "match2": {
+            "points": "0",
+            "butspour": "0",
+            "butscontre": "0"
+          },
+          "match3": {
+            "points": "0",
+            "butspour": "0",
+            "butscontre": "0"
+          }
+        },
+        {
+          "id": "U13G2",
+          "nomCourt": "dist13g2",
+          "rang": "1",
+          "points": "4",
+          "butsdiff": "1",
+          "butspour": "1",
+          "butscontre": "0",
+          "match1": {
+            "points": "4",
+            "butspour": "1",
+            "butscontre": "0"
+          },
+          "match2": {
+            "points": "0",
+            "butspour": "0",
+            "butscontre": "0"
+          },
+          "match3": {
+            "points": "0",
+            "butspour": "0",
+            "butscontre": "0"
+          }
+        },
+        {
+          "id": "U13G3",
+          "nomCourt": "dist13g3",
+          "rang": "2",
+          "points": "2",
+          "butsdiff": "0",
+          "butspour": "2",
+          "butscontre": "2",
+          "match1": {
+            "points": "2",
+            "butspour": "2",
+            "butscontre": "2"
+          },
+          "match2": {
+            "points": "0",
+            "butspour": "0",
+            "butscontre": "0"
+          },
+          "match3": {
+            "points": "0",
+            "butspour": "0",
+            "butscontre": "0"
+          }
+        },
+        {
+          "id": "U13G4",
+          "nomCourt": "dist13g4",
+          "rang": "2",
+          "points": "2",
+          "butsdiff": "0",
+          "butspour": "2",
+          "butscontre": "2",
+          "match1": {
+            "points": "2",
+            "butspour": "2",
+            "butscontre": "2"
+          },
+          "match2": {
+            "points": "0",
+            "butspour": "0",
+            "butscontre": "0"
+          },
+          "match3": {
+            "points": "0",
+            "butspour": "0",
+            "butscontre": "0"
+          }
+        }
+      ]
+    },
+    {
+      "cat_code": "cat1",
+      "categorie_id": "U13G",
+      "poule": "PB",
+      "leclassement": [
+        {
+          "id": "U13G5",
+          "nomCourt": "dist13g5",
+          "rang": "",
+          "points": "0",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        },
+        {
+          "id": "U13G6",
+          "nomCourt": "dist13g6",
+          "rang": "",
+          "points": "0",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        },
+        {
+          "id": "U13G7",
+          "nomCourt": "dist13g7",
+          "rang": "",
+          "points": "0",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        },
+        {
+          "id": "U13G8",
+          "nomCourt": "dist13g8",
+          "rang": "",
+          "points": "0",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        }
+      ]
+    },
+    {
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PA",
+      "leclassement": [
+        {
+          "id": "U15G1",
+          "nomCourt": "rict15g1",
+          "rang": "",
+          "points": "0",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        },
+        {
+          "id": "U15G2",
+          "nomCourt": "rict15g2",
+          "rang": "",
+          "points": "4",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        },
+        {
+          "id": "U15G3",
+          "nomCourt": "rict15g3",
+          "rang": "",
+          "points": "0",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        },
+        {
+          "id": "U15G4",
+          "nomCourt": "rict15g4",
+          "rang": "",
+          "points": "1",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        }
+      ]
+    },
+    {
+      "cat_code": "cat2",
+      "categorie_id": "U15G",
+      "poule": "PB",
+      "leclassement": [
+        {
+          "id": "U15G5",
+          "nomCourt": "rict15g5",
+          "rang": "",
+          "points": "6",
+          "butsdiff": "1",
+          "butspour": "6",
+          "butscontre": "5",
+          "match1": {
+            "points": "2",
+            "butspour": "5",
+            "butscontre": "5"
+          },
+          "match2": {
+            "points": "4",
+            "butspour": "1",
+            "butscontre": "0"
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        },
+        {
+          "id": "U15G6",
+          "nomCourt": "rict15g6",
+          "rang": "",
+          "points": "0",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        },
+        {
+          "id": "U15G7",
+          "nomCourt": "rict15g7",
+          "rang": "",
+          "points": "0",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        },
+        {
+          "id": "U15G8",
+          "nomCourt": "rict15g8",
+          "rang": "",
+          "points": "0",
+          "butsdiff": "0",
+          "butspour": "0",
+          "butscontre": "0",
+          "match1": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match2": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          },
+          "match3": {
+            "points": "",
+            "butspour": "",
+            "butscontre": ""
+          }
+        }
+      ]
+    }
+  ]
+}
