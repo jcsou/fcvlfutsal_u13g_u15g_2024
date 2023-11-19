@@ -31,15 +31,16 @@ Sub info_tournoi 'write string from the cells to the JSON file
 		end if
 	next i
 	s=s & " ] }"
-	if NOT saveStringToFile("f:/info_tournoi.json", s, "UTF-8") then msgbox("Error: Write to the JSON file", 16, "testJSON")
+	if NOT saveStringToFile( oSheetInfo.getCellRangeByName("B12").getString() & "/info_tournoi.json", s, "UTF-8") then msgbox("Error: Write to the JSON file", 16, "testJSON")
 End Sub
 
 Sub matchs_poules 'write string from the cells to the JSON file
-	dim oDoc as object, oSheet as object, oRange as object, data(), i%, s$
+	dim oDoc as object, oSheet as object, oSheetInfo as object, oRange as object, data(), i%, s$
 	dim match$, matchrange$
 	dim oSheetClassement as object, oRangeClassementA as object, oRangeClassementB as object, classement$
 
 	oDoc=ThisComponent
+	oSheetInfo=oDoc.getSheets().getByName("info")
 	oSheet=oDoc.getSheets().getByName("matchspoules")
 	match=oSheet.getCellRangeByName("A1").getString()
 	matchrange=oSheet.getCellRangeByName("A2").getString()
@@ -88,9 +89,19 @@ Sub matchs_poules 'write string from the cells to the JSON file
 	oRangeClassementB=oSheetClassement.getCellRangeByName("C9:T14")
 	concatClassements(oRangeClassementB, s)
 
+	s=s & ","	' catégorie 2
+
+	oRangeClassementA=oSheetClassement.getCellRangeByName("C17:T22")
+	concatClassements(oRangeClassementA, s)
+
+	s=s & ","
+
+	oRangeClassementB=oSheetClassement.getCellRangeByName("C24:T29")
+	concatClassements(oRangeClassementB, s)
+
 	s=s & " ] "	'Fin Classement
 	s=s & " } " 'Fin Doc
-	if NOT saveStringToFile("f:/matchs_poules.json", s, "UTF-8") then msgbox("Error: Write to the JSON file", 16, "testJSON")
+	if NOT saveStringToFile( oSheetInfo.getCellRangeByName("B12").getString() & "/matchs_poules.json", s, "UTF-8") then msgbox("Error: Write to the JSON file", 16, "testJSON")
 End Sub
 
 Function concatClassements(oRange, s$) 'write classement
