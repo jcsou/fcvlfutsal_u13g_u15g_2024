@@ -25,8 +25,8 @@ const theme = {
   colorPB: '#80cbc4',
   colorPC: '#b39ddb',
   colorPD: '#ef9a9a',
-  //colorPE: '#F1948A',
-  //colorPF: '#CACFD2',
+  colorF1: '#00B8C2',
+  colorF2: '#FD6D9E',
 }
 
 export default new Vuetify({

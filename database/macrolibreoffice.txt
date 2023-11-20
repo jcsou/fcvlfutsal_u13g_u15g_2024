@@ -151,6 +151,93 @@ Function concatClassements(oRange, s$) 'write classement
 	s=s & " } "
 End Function
 
+Sub matchs_finales 'write string from the cells to the JSON file
+	dim oDoc as object, oSheet as object, oSheetInfo as object, oRange as object, data(), i%, s$
+	dim match$, matchrange$
+	dim oSheetClassement as object, oRangeClassementA as object, oRangeClassementB as object, classement$
+
+	oDoc=ThisComponent
+	oSheet=oDoc.getSheets().getByName("finales")
+	oSheetInfo=oDoc.getSheets().getByName("info")
+
+	match=oSheet.getCellRangeByName("A1").getString()
+	matchrange=oSheet.getCellRangeByName("A2").getString()
+	oRange=oSheet.getCellRangeByName(matchrange)
+	data=oRange.getDataArray() 'array with the cell content
+
+	s="{ " & match & ": [ "
+	for i=1 to ubound(data) 'create the JSON string "manually"
+		s=s & "{ "
+		s=s &  """" & data(0)(0) & """: " & """" & data(i)(0) & """," 					'id
+		s=s &  """" & data(0)(1) & """: " & """" & data(i)(1) & """," 					'salle
+		s=s &  """" & data(0)(2) & """: " & """" & Format(data(i)(2),"HH:MM") & """," 	'heure
+		s=s &  """" & data(0)(3) & """: " & """" & data(i)(3) & """," 					'cat_code
+		s=s &  """" & data(0)(4) & """: " & """" & data(i)(4) & """," 					'categorie_id
+		s=s &  """" & data(0)(5) & """: " & """" & data(i)(5) & """," 					'niveau
+		s=s &  """" & data(0)(6) & """: " & """" & data(i)(6) & """," 					'code
+		s=s &  """" & data(0)(7) & """: " & """" & data(i)(7) & """," 					'nom
+		s=s &  """equipeDom"": { " 						'equipeDom
+		s=s &  """" & data(0)(8) & """: " & """" & data(i)(8) & """," 					'id equipe
+		s=s &  """" & data(0)(9) & """: " & """" & data(i)(9) & ""","					'nomCourt
+		s=s &  """" & data(0)(10) & """: " & """" & data(i)(10) & ""","					'V_D
+		s=s &  """" & data(0)(11) & """: " & """" & data(i)(11) & """"					'but
+		s=s &  "}, "									'Fin equipeDom
+		s=s &  """equipeExt"": { " 						'equipeExt
+		s=s &  """" & data(0)(12) & """: " & """" & data(i)(12) & """," 				'id equipe
+		s=s &  """" & data(0)(15) & """: " & """" & data(i)(15) & ""","					'nomCourt
+		s=s &  """" & data(0)(13) & """: " & """" & data(i)(13) & ""","					'V_D
+		s=s &  """" & data(0)(14) & """: " & """" & data(i)(14) & """"					'but
+		s=s &  "} "										'Fin equipeExt
+		if i<>ubound(data) then
+			s=s & "},"
+		else
+			s=s & "}"
+		end if
+	next i
+	s=s & " ], " 'Fin Match
+
+	classement=oSheet.getCellRangeByName("V1").getString()
+	s=s & classement & ": [ "
+
+	oRangeClassementA=oSheet.getCellRangeByName("T2:V11")
+	concatClassementsFinale(oRangeClassementA, s)
+
+	s=s & ","
+
+	oRangeClassementB=oSheet.getCellRangeByName("T13:V22")
+	concatClassementsFinale(oRangeClassementB, s)
+
+
+	s=s & " ] "	'Fin Classement
+
+	s=s & " } " 'Fin Doc
+	if NOT saveStringToFile( oSheetInfo.getCellRangeByName("B12").getString() & "/matchs_finales.json", s, "UTF-8") then msgbox("Error: Write to the JSON file", 16, "testJSON")
+End Sub
+
+Function concatClassementsFinale(oRange, s$) 'write classement
+	dim data(), i%
+	data=oRange.getDataArray()
+	s=s & "{ "
+	s=s &  """" & "categorie_id" & """: " & """" & data(0)(0) & """," 					'categorie_id
+	s=s & """leclassement""" & ": [ "
+
+	for i=2 to ubound(data)
+		s=s & "{ "
+		s=s &  """" & data(1)(0) & """: " & """" & data(i)(0) & """," 					'rang
+		s=s &  """" & data(1)(1) & """: " & """" & data(i)(1) & """," 					'equipe
+		s=s &  """" & data(1)(2) & """: " & """" & data(i)(2) & """" 					'nomCourt
+
+		if i<>ubound(data) then
+			s=s & "},"
+		else
+			s=s & "}"
+		end if
+	next i
+	s=s & " ] "	'Fin leclassement
+	s=s & " } "
+End Function
+
+
 Function saveStringToFile(sFileName$, s$, optional sEncoding$) as boolean 'write the string to the file
 	on local error goto bug
 	if isMissing(sEncoding) then sEncoding="UTF-8" 'default encoding

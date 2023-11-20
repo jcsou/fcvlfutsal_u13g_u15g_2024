@@ -2,10 +2,10 @@
     <v-container id="SenFPhaseFinale" fluid tag="section">
     <v-row>
       <v-col class="col-md-8">
-        <!-- {{ categorie }} Match Classement -->
-        <base-material-card color="primary" class="px-0">
+        <!-- {{ categorie_id }} Match Classement -->
+        <base-material-card color="colorF1" class="px-0">
           <template v-slot:heading>
-            <div class="display-2 font-weight-light">{{ categorie }} - 1er Match Classement</div>
+            <div class="display-2 font-weight-light">{{ categorie_id }} - 1er Match Classement</div>
           </template>
           <v-card-text class="px-0" >
             <v-data-table :headers="headersMatch" :items="lesmatchsNiv1" hide-default-footer class="px-0" mobile-breakpoint="350">
@@ -37,10 +37,10 @@
           </v-card-text>
         </base-material-card>
 
-        <!-- {{ categorie }} - 2ieme Match Classement -->
-        <base-material-card color="primary" class="px-0">
+        <!-- {{ categorie_id }} - 2ieme Match Classement -->
+        <base-material-card color="colorF1" class="px-0">
             <template v-slot:heading>
-                <div class="display-2 font-weight-light">{{ categorie }} - 2ieme Match Classement</div>
+                <div class="display-2 font-weight-light">{{ categorie_id }} - 2ieme Match Classement</div>
             </template>
             <v-card-text class="px-0" >
                 <v-data-table :headers="headersMatch" :items="lesmatchsNiv2" hide-default-footer class="px-0" mobile-breakpoint="350">
@@ -74,9 +74,9 @@
 
       </v-col>
       <v-col class="col-md-4">
-        <base-material-card color="primary" class="px-0"  >
+        <base-material-card color="colorF1" class="px-0"  >
           <template v-slot:heading>
-              <div class="display-2 font-weight-light">{{ categorie }} - Classement Final</div>
+              <div class="display-2 font-weight-light">{{ categorie_id }} - Classement Final</div>
           </template>
           <v-card-text class="px-0" >
               <v-data-table :headers="headersClassement" :items="leclassement" hide-default-footer class="px-0" mobile-breakpoint="350">
@@ -107,8 +107,8 @@ import axios from 'axios'
 export default {
     data() {
       return {
-        categorie: "U13G",
-        urlFinales: process.env.BASE_URL + "datas/U13G_finales.json",
+        categorie_id: "U13G",
+        urlFinales: process.env.BASE_URL + "datas/matchs_finales.json",
         urlEquipe: process.env.BASE_URL + "datas/info_tournoi.json",
         lesmatchsNiv1: [],
         lesmatchsNiv2: [],
@@ -199,12 +199,13 @@ export default {
                   });
 
             var urlFinales = this.urlFinales;
+            var categorie_id = this.categorie_id;
             axios
                 .get(urlFinales)
                 .then(response => {
-                  this.lesmatchsNiv1 = response.data.lesmatchs.filter(function (entry){return entry.niveau==='1';})
-                  this.lesmatchsNiv2 = response.data.lesmatchs.filter(function (entry){return entry.niveau==='2';})
-                  this.leclassement = response.data.leclassement
+                  this.lesmatchsNiv1 = response.data.lesmatchs.filter(function (entry){return entry.categorie_id===categorie_id;}).filter(function (entry){return entry.niveau==='1';})
+                  this.lesmatchsNiv2 = response.data.lesmatchs.filter(function (entry){return entry.categorie_id===categorie_id;}).filter(function (entry){return entry.niveau==='2';})
+                  this.leclassement = response.data.lesclassements.filter(function (entry){return entry.categorie_id===categorie_id;})[0].leclassement
 
                   var blancEquipe = {"categorie_id": "","id": "","nom": "","nomCourt": "","fanion": "px.png"}
 

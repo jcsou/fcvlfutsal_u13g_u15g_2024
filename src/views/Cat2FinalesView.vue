@@ -1,105 +1,105 @@
 <template>
     <v-container id="SenFPhaseFinale" fluid tag="section">
     <v-row>
-      <v-col class="col-md-8">
-        <!-- {{ categorie }} Match Classement -->
-        <base-material-card color="primary" class="px-0">
-          <template v-slot:heading>
-            <div class="display-2 font-weight-light">{{ categorie }} - 1er Match Classement</div>
-          </template>
-          <v-card-text class="px-0" >
-            <v-data-table :headers="headersMatch" :items="lesmatchsNiv1" hide-default-footer class="px-0" mobile-breakpoint="350">
-              <template v-slot:[`item.id`]="{ item }">
-                <h6 class="display-1 mb-1 black--text">{{ item.id}}</h6>
-                <h6 class="display-1 mb-1 grey--text">{{ item.salle}}</h6>
-                <h6 class="display-1 mb-1 grey--text">{{ item.heureDebut}}</h6>
-              </template>
-                <template v-slot:[`item.nom`]="{ item }">
-                <h6 class="display-1 mb-1 black--text">{{ item.nom}}</h6>
-                <h6 class="display-1 mb-1 grey--text">{{ item.code}}</h6>
-              </template>
-              <template v-slot:[`item.displayDom.fanion`]="{ item }">
-                    <v-avatar>
-                      <v-img v-bind:src="'img/fanion/'+item.displayDom.fanion" :alt="item.displayDom.nomCourt" max-height="25" max-width="25"/>
-                    </v-avatar>
-                    <h6 class="display-1 mb-1 grey--text">{{ item.displayDom.nomCourt }}</h6>
-              </template>
-              <template v-slot:[`item.score`]="{ item }">
-                <v-chip color="grey" ><h6 class="display-1 mb-1 font-weight-bold">{{ item.score }}</h6></v-chip>
-              </template>
-              <template v-slot:[`item.displayExt.fanion`]="{ item }">
-                    <v-avatar>
-                      <v-img v-bind:src="'img/fanion/'+item.displayExt.fanion" :alt="item.displayExt.nomCourt" max-height="25" max-width="25"/>
-                    </v-avatar>
-                    <h6 class="display-1 mb-1 grey--text">{{ item.displayExt.nomCourt }}</h6>
-              </template>
-            </v-data-table>
-          </v-card-text>
-        </base-material-card>
-
-        <!-- {{ categorie }} - 2ieme Match Classement -->
-        <base-material-card color="primary" class="px-0">
-            <template v-slot:heading>
-                <div class="display-2 font-weight-light">{{ categorie }} - 2ieme Match Classement</div>
-            </template>
-            <v-card-text class="px-0" >
-                <v-data-table :headers="headersMatch" :items="lesmatchsNiv2" hide-default-footer class="px-0" mobile-breakpoint="350">
-                    <template v-slot:[`item.id`]="{ item }">
-                        <h6 class="display-1 mb-1 black--text">{{ item.id}}</h6>
-                        <h6 class="display-1 mb-1 grey--text">{{ item.salle}}</h6>
-                        <h6 class="display-1 mb-1 grey--text">{{ item.heureDebut}}</h6>
-                    </template>
-                    <template v-slot:[`item.nom`]="{ item }">
-                        <h6 class="display-1 mb-1 black--text">{{ item.nom}}</h6>
-                        <h6 class="display-1 mb-1 grey--text">{{ item.code}}</h6>
-                    </template>
-                    <template v-slot:[`item.displayDom.fanion`]="{ item }">
-                        <v-avatar>
-                            <v-img v-bind:src="'img/fanion/'+item.displayDom.fanion" :alt="item.displayDom.nomCourt" max-height="25" max-width="25"/>
-                        </v-avatar>
-                        <h6 class="display-1 mb-1 grey--text">{{ item.displayDom.nomCourt }}</h6>
-                    </template>
-                    <template v-slot:[`item.score`]="{ item }">
-                        <v-chip color="grey" ><h6 class="display-1 mb-1 font-weight-bold">{{ item.score }}</h6></v-chip>
-                    </template>
-                    <template v-slot:[`item.displayExt.fanion`]="{ item }">
-                        <v-avatar>
-                        <v-img v-bind:src="'img/fanion/'+item.displayExt.fanion" :alt="item.displayExt.nomCourt" max-height="25" max-width="25"/>
-                        </v-avatar>
-                        <h6 class="display-1 mb-1 grey--text">{{ item.displayExt.nomCourt }}</h6>
-                    </template>
-                </v-data-table>
-            </v-card-text>
-        </base-material-card>
-
-      </v-col>
-      <v-col class="col-md-4">
-        <base-material-card color="primary" class="px-0"  >
-          <template v-slot:heading>
-              <div class="display-2 font-weight-light">{{ categorie }} - Classement Final</div>
-          </template>
-          <v-card-text class="px-0" >
-              <v-data-table :headers="headersClassement" :items="leclassement" hide-default-footer class="px-0" mobile-breakpoint="350">
-                  <template v-slot:[`item.displayEqui.nom`]="{ item }">
-                      <v-chip class="ma-2" label>
-                          <v-avatar left>
-                              <v-img v-bind:src="'img/fanion/'+item.displayEqui.fanion" :alt="item.displayEqui.nomCourt"/>
-                          </v-avatar>
-                          <h6 class="display-1 mb-1 ">{{ item.displayEqui.nom }}</h6>
-                      </v-chip>
-                  </template>
-              </v-data-table>
-          </v-card-text>
-        </base-material-card>
-
-        <v-card max-width="400" class="mx-auto">
-            <v-img class="mx-auto" max-height="300px" max-width="300px" src="img/pub/mma.jpeg" alt="annonceur"/>
-            <v-card-title>Annonceurs</v-card-title>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+    <v-col class="col-md-8">
+    <!-- {{ categorie_id }} Match Classement -->
+    <base-material-card color="colorF2" class="px-0">
+    <template v-slot:heading>
+        <div class="display-2 font-weight-light">{{ categorie_id }} - 1er Match Classement</div>
+    </template>
+    <v-card-text class="px-0" >
+    <v-data-table :headers="headersMatch" :items="lesmatchsNiv1" hide-default-footer class="px-0" mobile-breakpoint="350">
+    <template v-slot:[`item.id`]="{ item }">
+    <h6 class="display-1 mb-1 black--text">{{ item.id}}</h6>
+    <h6 class="display-1 mb-1 grey--text">{{ item.salle}}</h6>
+    <h6 class="display-1 mb-1 grey--text">{{ item.heureDebut}}</h6>
 </template>
+<template v-slot:[`item.nom`]="{ item }">
+<h6 class="display-1 mb-1 black--text">{{ item.nom}}</h6>
+<h6 class="display-1 mb-1 grey--text">{{ item.code}}</h6>
+        </template>
+<template v-slot:[`item.displayDom.fanion`]="{ item }">
+<v-avatar>
+<v-img v-bind:src="'img/fanion/'+item.displayDom.fanion" :alt="item.displayDom.nomCourt" max-height="25" max-width="25"/>
+</v-avatar>
+<h6 class="display-1 mb-1 grey--text">{{ item.displayDom.nomCourt }}</h6>
+        </template>
+<template v-slot:[`item.score`]="{ item }">
+<v-chip color="grey" ><h6 class="display-1 mb-1 font-weight-bold">{{ item.score }}</h6></v-chip>
+        </template>
+<template v-slot:[`item.displayExt.fanion`]="{ item }">
+<v-avatar>
+<v-img v-bind:src="'img/fanion/'+item.displayExt.fanion" :alt="item.displayExt.nomCourt" max-height="25" max-width="25"/>
+</v-avatar>
+<h6 class="display-1 mb-1 grey--text">{{ item.displayExt.nomCourt }}</h6>
+        </template>
+        </v-data-table>
+        </v-card-text>
+        </base-material-card>
+
+        <!-- {{ categorie_id }} - 2ieme Match Classement -->
+<base-material-card color="colorF2" class="px-0">
+<template v-slot:heading>
+    <div class="display-2 font-weight-light">{{ categorie_id }} - 2ieme Match Classement</div>
+</template>
+<v-card-text class="px-0" >
+    <v-data-table :headers="headersMatch" :items="lesmatchsNiv2" hide-default-footer class="px-0" mobile-breakpoint="350">
+        <template v-slot:[`item.id`]="{ item }">
+        <h6 class="display-1 mb-1 black--text">{{ item.id}}</h6>
+        <h6 class="display-1 mb-1 grey--text">{{ item.salle}}</h6>
+        <h6 class="display-1 mb-1 grey--text">{{ item.heureDebut}}</h6>
+    </template>
+    <template v-slot:[`item.nom`]="{ item }">
+    <h6 class="display-1 mb-1 black--text">{{ item.nom}}</h6>
+    <h6 class="display-1 mb-1 grey--text">{{ item.code}}</h6>
+</template>
+<template v-slot:[`item.displayDom.fanion`]="{ item }">
+<v-avatar>
+    <v-img v-bind:src="'img/fanion/'+item.displayDom.fanion" :alt="item.displayDom.nomCourt" max-height="25" max-width="25"/>
+</v-avatar>
+<h6 class="display-1 mb-1 grey--text">{{ item.displayDom.nomCourt }}</h6>
+</template>
+<template v-slot:[`item.score`]="{ item }">
+<v-chip color="grey" ><h6 class="display-1 mb-1 font-weight-bold">{{ item.score }}</h6></v-chip>
+        </template>
+<template v-slot:[`item.displayExt.fanion`]="{ item }">
+<v-avatar>
+<v-img v-bind:src="'img/fanion/'+item.displayExt.fanion" :alt="item.displayExt.nomCourt" max-height="25" max-width="25"/>
+</v-avatar>
+<h6 class="display-1 mb-1 grey--text">{{ item.displayExt.nomCourt }}</h6>
+        </template>
+        </v-data-table>
+        </v-card-text>
+        </base-material-card>
+
+        </v-col>
+<v-col class="col-md-4">
+<base-material-card color="colorF2" class="px-0"  >
+    <template v-slot:heading>
+        <div class="display-2 font-weight-light">{{ categorie_id }} - Classement Final</div>
+    </template>
+    <v-card-text class="px-0" >
+        <v-data-table :headers="headersClassement" :items="leclassement" hide-default-footer class="px-0" mobile-breakpoint="350">
+            <template v-slot:[`item.displayEqui.nom`]="{ item }">
+            <v-chip class="ma-2" label>
+                <v-avatar left>
+                    <v-img v-bind:src="'img/fanion/'+item.displayEqui.fanion" :alt="item.displayEqui.nomCourt"/>
+                </v-avatar>
+                <h6 class="display-1 mb-1 ">{{ item.displayEqui.nom }}</h6>
+            </v-chip>
+        </template>
+    </v-data-table>
+</v-card-text>
+</base-material-card>
+
+<v-card max-width="400" class="mx-auto">
+<v-img class="mx-auto" max-height="300px" max-width="300px" src="img/pub/mma.jpeg" alt="annonceur"/>
+<v-card-title>Annonceurs</v-card-title>
+</v-card>
+        </v-col>
+        </v-row>
+        </v-container>
+        </template>
 
 <script>
 import axios from 'axios'
@@ -107,8 +107,8 @@ import axios from 'axios'
 export default {
     data() {
       return {
-        categorie: "U15G",
-        urlFinales: process.env.BASE_URL + "datas/U15G_finales.json",
+        categorie_id: "U15G",
+        urlFinales: process.env.BASE_URL + "datas/matchs_finales.json",
         urlEquipe: process.env.BASE_URL + "datas/info_tournoi.json",
         lesmatchsNiv1: [],
         lesmatchsNiv2: [],
@@ -199,12 +199,13 @@ export default {
                   });
 
             var urlFinales = this.urlFinales;
+            var categorie_id = this.categorie_id;
             axios
                 .get(urlFinales)
                 .then(response => {
-                  this.lesmatchsNiv1 = response.data.lesmatchs.filter(function (entry){return entry.niveau==='1';})
-                  this.lesmatchsNiv2 = response.data.lesmatchs.filter(function (entry){return entry.niveau==='2';})
-                  this.leclassement = response.data.leclassement
+                  this.lesmatchsNiv1 = response.data.lesmatchs.filter(function (entry){return entry.categorie_id===categorie_id;}).filter(function (entry){return entry.niveau==='1';})
+                  this.lesmatchsNiv2 = response.data.lesmatchs.filter(function (entry){return entry.categorie_id===categorie_id;}).filter(function (entry){return entry.niveau==='2';})
+                  this.leclassement = response.data.lesclassements.filter(function (entry){return entry.categorie_id===categorie_id;})[0].leclassement
 
                   var blancEquipe = {"categorie_id": "","id": "","nom": "","nomCourt": "","fanion": "px.png"}
 
