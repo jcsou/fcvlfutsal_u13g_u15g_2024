@@ -15,11 +15,18 @@
                         <br/><a @click="scrollMeTo('Cat2')" >{{cat2.categorie_id}} : {{cat2.texthoraire}}</a>
                     <p class="font-weight-light grey--text">{{tournoi.temps_jeu}}</p>
                   </v-card-text>
-                  <v-card-actions class="pa-1">
-                    <v-chip class="ma-2" label link :href="tournoi.lien_reglement">
+                  <v-card-actions class="pa-0">
+                    <v-spacer></v-spacer>
+                    <v-chip class="ma-0" label link :href="tournoi.lien_reglement">
                        <v-icon left>mdi-information-outline</v-icon> Règlement
                     </v-chip>
                     <v-spacer></v-spacer>
+                    <v-chip class="ma-0" label link :href="tournoi.lien_ficheequipe">
+                       <v-icon left>mdi-account-multiple-outline</v-icon> Fiche Equipe
+                    </v-chip>
+                    <v-spacer></v-spacer>
+                  </v-card-actions>
+                  <v-card-actions class="pa-0">
                     <v-chip class="ma-2" label @click.stop="dialogMap = true">
                        <v-icon left>mdi-map-outline</v-icon> Plan (Accès)
                     </v-chip>
@@ -221,7 +228,7 @@ export default {
         cat2: '{"id": "", "categorie_id": "", "nomlong": "", "texthoraire": ""}',
         salle1: '{"id": "", "nomlong": "", "lien": ""}',
         salle2: '{"id": "", "nomlong": "", "lien": ""}',
-        tournoi: '{"titre": "", "date": "", "temps_jeu": "", "lien_reglement": "", "lien_site": "", "titre_QRcode": ""}',
+        tournoi: '{"titre": "", "date": "", "temps_jeu": "", "lien_reglement": "", "lien_ficheequipe": "", "lien_site": "", "titre_QRcode": ""}',
 
       };
     },

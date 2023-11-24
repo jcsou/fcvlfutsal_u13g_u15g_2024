@@ -111,15 +111,13 @@ export default {
 
         url_Poule: process.env.BASE_URL + "datas/matchs_poules.json",
 
-        url_c1_finales: process.env.BASE_URL + "datas/U13G_finales.json",
-        url_c2_finales: process.env.BASE_URL + "datas/U15G_finales.json",
+        url_finales: process.env.BASE_URL + "datas/matchs_finales.json",
 
         urlEquipe: process.env.BASE_URL + "datas/info_tournoi.json",
 
         lesmatchs: [],
 
         lesmatchs_c1_final: [],
-        lesmatchs_c2_final: [],
 
         lesequipeskey: {},
 
@@ -206,10 +204,10 @@ export default {
                    console.log(error)
                 })
 
-            // Load C1_F
-            var url_c1_finales = this.url_c1_finales;
+            // Load C_F
+            var url_finales = this.url_finales;
             axios
-                .get(url_c1_finales)
+                .get(url_finales)
                 .then(response => {
                   this.lesmatchs_c1_final = response.data.lesmatchs
                   var blancEquipe = {"categorie_id": "","id": "","nom": "","nomCourt": "","fanion": "px.png"}
@@ -233,33 +231,6 @@ export default {
                    console.log(error)
                 })
 
-            // Load C2_F
-            var url_c2_finales = this.url_c2_finales;
-            axios
-                .get(url_c2_finales)
-                .then(response => {
-                  this.lesmatchs_c2_final = response.data.lesmatchs
-                  var blancEquipe = {"categorie_id": "","id": "","nom": "","nomCourt": "","fanion": "px.png"}
-
-                  for (var n in this.lesmatchs_c2_final ) {
-                    this.lesmatchs_c2_final[n].score = this.lesmatchs_c2_final[n].equipeDom.but+" - "+this.lesmatchs_c2_final[n].equipeExt.but
-
-                    if (this.lesmatchs_c2_final[n].equipeDom.id)
-                        this.lesmatchs_c2_final[n].displayDom = this.lesequipeskey[this.lesmatchs_c2_final[n].equipeDom.id]
-                    else
-                        this.lesmatchs_c2_final[n].displayDom = blancEquipe
-
-                    if (this.lesmatchs_c2_final[n].equipeExt.id)
-                        this.lesmatchs_c2_final[n].displayExt = this.lesequipeskey[this.lesmatchs_c2_final[n].equipeExt.id]
-                    else
-                        this.lesmatchs_c2_final[n].displayExt = blancEquipe
-
-                    this.lesmatchs_c2_final[n].categorie = this.c2_categorie
-                  }
-                }).catch(error => {
-                   console.log(error)
-                })
-
       }
     },
     computed: {
@@ -271,7 +242,7 @@ export default {
             return lesmatchs.sort((p1, p2) => (p1.keytime > p2.keytime) ? 1 : (p1.keytime < p2.keytime) ? -1 : (p1.id > p2.id) ? 1 :(p1.id < p2.id) ? -1 : 0)
         },
         getMatchsFinales() {
-            var lesmatchs = this.lesmatchs_c1_final.concat(this.lesmatchs_c2_final)
+            var lesmatchs = this.lesmatchs_c1_final
             for (var n in lesmatchs) {
                 lesmatchs[n].keytime = lesmatchs[n].heureDebut.replace(":", "")
             }
