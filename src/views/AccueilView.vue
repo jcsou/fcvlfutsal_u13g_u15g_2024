@@ -146,11 +146,11 @@
                            <v-icon left>mdi-home-switch-outline</v-icon> Les Salles
                         </v-chip>
                         <v-spacer></v-spacer>
-                        <v-chip class="ma-2" label link to="/Cat1Poules">
+                        <v-chip class="ma-2" label link to="/Cat1Poules.html">
                            <v-icon left>mdi-view-split-vertical</v-icon> Poules
                         </v-chip>
                         <v-spacer></v-spacer>
-                        <v-chip class="ma-2" label link to="/Cat1Finales">
+                        <v-chip class="ma-2" label link to="/Cat1Finales.html">
                            <v-icon left>mdi-format-line-weight</v-icon> Finales
                         </v-chip>
                       </v-card-actions>
@@ -195,11 +195,11 @@
                              <v-icon left>mdi-home-switch-outline</v-icon> Les Salles
                           </v-chip>
                           <v-spacer></v-spacer>
-                        <v-chip class="ma-2" label link to="/Cat2Poules">
+                        <v-chip class="ma-2" label link to="/Cat2Poules.html">
                            <v-icon left>mdi-view-split-vertical</v-icon> Poules
                         </v-chip>
                         <v-spacer></v-spacer>
-                        <v-chip class="ma-2" label link to="/Cat2Finales">
+                        <v-chip class="ma-2" label link to="/Cat2Finales.html">
                            <v-icon left>mdi-format-line-weight</v-icon> Finales
                         </v-chip>
                       </v-card-actions>

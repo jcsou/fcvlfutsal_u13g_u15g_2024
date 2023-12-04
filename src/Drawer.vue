@@ -58,13 +58,13 @@
       items: [
         { title: 'Accueil', icon: 'mdi-view-dashboard', to: '/' },
 
-        { title: 'U13G Poules', icon: 'mdi-view-split-vertical', to: '/Cat1Poules' },
-        { title: 'U13G Finales', icon: 'mdi-format-line-weight', to: '/Cat1Finales' },
+        { title: 'U13G Poules', icon: 'mdi-view-split-vertical', to: '/Cat1Poules.html' },
+        { title: 'U13G Finales', icon: 'mdi-format-line-weight', to: '/Cat1Finales.html' },
 
-        { title: 'U15G Poules', icon: 'mdi-view-split-vertical', to: '/Cat2Poules' },
-        { title: 'U15G Finales', icon: 'mdi-format-line-weight', to: '/Cat2Finales' },
+        { title: 'U15G Poules', icon: 'mdi-view-split-vertical', to: '/Cat2Poules.html' },
+        { title: 'U15G Finales', icon: 'mdi-format-line-weight', to: '/Cat2Finales.html' },
 
-        { title: 'Timeline', icon: 'mdi-timeline-clock-outline', to: '/Timeline' },
+        { title: 'Timeline', icon: 'mdi-timeline-clock-outline', to: '/Timeline.html' },
       ],
     }),
 

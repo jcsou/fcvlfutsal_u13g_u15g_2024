@@ -1,100 +1,101 @@
 <template>
-    <v-container id="pouleA-match" fluid tag="section">
-    <v-row>
-    <v-col>
-        <v-card class="mx-auto" >
-            <v-card dark flat >
-                <v-card-title class="pa-1 primary lighten-3">
-                    <h4 class="font-weight-light text-center black--text">
-                        Matchs de Poule {{ c1_categorie }} / {{ c2_categorie }}
-                    </h4>
-                </v-card-title>
-            </v-card>
-            <v-card-text class="pa-1 ma-0">
-                <v-timeline align-top dense >
+    <v-card class="mx-auto">
+    <v-tabs color="primary accent-4" left>
+        <v-tab >Poules</v-tab>
+        <v-tab >Classements</v-tab>
+        <v-chip class="ma-2" label @click.stop="update()">
+            <v-icon>mdi-reload</v-icon>Reload
+        </v-chip>
 
-                    <v-timeline-item color="primary" v-for="item in getMatchs" v-bind:key="item.id">
-                        <v-card max-width="400" class="pa-0 ma-0">
-                            <v-card-title>
-                                <strong>{{ item.heureDebut }} / Salle : {{ item.salle }}</strong>
-                            </v-card-title>
+        <v-tab-item>
+            <v-container id="poules-match" fluid tag="section">
+            <v-row>
+            <v-col>
+                <v-card class="mx-auto" >
+                    <v-card-text class="pa-1 ma-0">
+                        <h6>Timeline Poules</h6>
+                        <v-timeline align-top dense >
+                            <v-timeline-item v-for="item in getMatchs" v-bind:color="item.color" v-bind:key="item.id">
+                                <v-card class="pa-0 ma-0">
+                                    <v-card-title>
+                                        <strong>{{ item.heureDebut }} / Salle : {{ item.salle }}</strong>
+                                    </v-card-title>
 
-                            <v-card-text class="pa-0 ma-0"  align="center">
-                                <h6>N° {{ item.id }}, Catégorie : {{ item.categorie }}</h6>
-                                <v-container class="pa-0 ma-0">
-                                    <v-row >
-                                        <v-col class="pa-1 ma-0">
-                                            <h6 class="display-1 mb-1 grey--text">{{ item.displayDom.nomCourt }}</h6>
-                                            <v-avatar>
-                                                <v-img v-bind:src="'img/fanion/'+item.displayDom.fanion" :alt="item.displayDom.nomCourt" max-height="25" max-width="25"/>
-                                            </v-avatar>
-                                        </v-col>
-                                        <v-col class="pa-4 ma-0">
-                                            <v-chip color="grey" ><h6 class="display-1 mb-1 font-weight-bold">{{ item.score }}</h6></v-chip>
-                                        </v-col>
-                                        <v-col class="pa-1 ma-0">
-                                            <h6 class="display-1 mb-1 grey--text">{{ item.displayExt.nomCourt }}</h6>
-                                            <v-avatar>
-                                                <v-img v-bind:src="'img/fanion/'+item.displayExt.fanion" :alt="item.displayExt.nomCourt" max-height="25" max-width="25"/>
-                                            </v-avatar>
-                                        </v-col>
-                                    </v-row>
-                                </v-container>
-                            </v-card-text>
-                        </v-card>
-                    </v-timeline-item>
-                </v-timeline>
-            </v-card-text>
-        </v-card>
-    </v-col>
-    <v-col>
-        <v-card class="mx-auto" >
-            <v-card dark flat >
-                <v-card-title class="pa-1 primary lighten-3">
-                    <h4 class="font-weight-light text-center black--text">
-                        Matchs de Classement {{ c1_categorie }} / {{ c2_categorie }}
-                    </h4>
-                </v-card-title>
-            </v-card>
-            <v-card-text class="pa-1 ma-0">
-                <v-timeline align-top dense >
+                                    <v-card-text class="pa-0 ma-0"  align="center">
+                                        <h6>N° {{ item.id }}, Catégorie : {{ item.categorie }}</h6>
+                                        <v-container class="pa-0 ma-0">
+                                            <v-row >
+                                                <v-col class="pa-1 ma-0">
+                                                    <v-avatar>
+                                                        <v-img v-bind:src="'img/fanion/'+item.displayDom.fanion" :alt="item.displayDom.nomCourt" max-height="25" max-width="25"/>
+                                                    </v-avatar>{{ item.displayDom.nomCourt }}
+                                                </v-col>
+                                                <v-col class="pa-4 ma-0">
+                                                    <v-chip color="grey" ><h6 class="display-1 mb-1 font-weight-bold">{{ item.score }}</h6></v-chip>
+                                                </v-col>
+                                                <v-col class="pa-1 ma-0">
+                                                    <v-avatar>
+                                                        <v-img v-bind:src="'img/fanion/'+item.displayExt.fanion" :alt="item.displayExt.nomCourt" max-height="25" max-width="25"/>
+                                                    </v-avatar>{{ item.displayExt.nomCourt }}
+                                                </v-col>
+                                            </v-row>
+                                        </v-container>
+                                    </v-card-text>
+                                </v-card>
+                            </v-timeline-item>
+                        </v-timeline>
+                    </v-card-text>
+                </v-card>
+            </v-col>
+            </v-row>
+            </v-container>
+        </v-tab-item>
 
-                    <v-timeline-item color="secondary" v-for="item in getMatchsFinales" v-bind:key="item.id">
-                        <v-card max-width="400" class="pa-0 ma-0">
-                            <v-card-title>
-                                <strong>{{ item.heureDebut }} / Salle : {{ item.salle }}</strong>
-                            </v-card-title>
+        <v-tab-item>
+        <v-container id="classement-match" fluid tag="section">
+            <v-row>
+            <v-col>
+                <v-card class="mx-auto" >
+                    <v-card-text class="pa-1 ma-0">
+                        <h6>Timeline Classement</h6>
+                        <v-timeline align-top dense >
+                            <v-timeline-item v-for="item in getMatchsFinales" v-bind:color="item.color" v-bind:key="item.id">
+                                <v-card class="pa-0 ma-0">
+                                    <v-card-title>
+                                        <strong>{{ item.heureDebut }} / Salle : {{ item.salle }}</strong>
+                                    </v-card-title>
 
-                            <v-card-text class="pa-0 ma-0"  align="center">
-                                <h6>N° {{ item.id }}, Catégorie : {{ item.categorie }}, {{ item.nom }}</h6>
-                                <v-container class="pa-0 ma-0">
-                                    <v-row >
-                                        <v-col class="pa-1 ma-0">
-                                            <h6 class="display-1 mb-1 grey--text">{{ item.displayDom.nomCourt }}</h6>
-                                            <v-avatar>
-                                                <v-img v-bind:src="'img/fanion/'+item.displayDom.fanion" :alt="item.displayDom.nomCourt" max-height="25" max-width="25"/>
-                                            </v-avatar>
-                                        </v-col>
-                                        <v-col class="pa-4 ma-0">
-                                            <v-chip color="grey" ><h6 class="display-1 mb-1 font-weight-bold">{{ item.score }}</h6></v-chip>
-                                        </v-col>
-                                        <v-col class="pa-1 ma-0">
-                                            <h6 class="display-1 mb-1 grey--text">{{ item.displayExt.nomCourt }}</h6>
-                                            <v-avatar>
-                                                <v-img v-bind:src="'img/fanion/'+item.displayExt.fanion" :alt="item.displayExt.nomCourt" max-height="25" max-width="25"/>
-                                            </v-avatar>
-                                        </v-col>
-                                    </v-row>
-                                </v-container>
-                            </v-card-text>
-                        </v-card>
-                    </v-timeline-item>
-                </v-timeline>
-            </v-card-text>
-        </v-card>
-    </v-col>
-    </v-row>
-    </v-container>
+                                    <v-card-text class="pa-0 ma-0"  align="center">
+                                        <h6>N° {{ item.id }}, Catégorie : {{ item.categorie }}, {{ item.nom }}</h6>
+                                        <v-container class="pa-0 ma-0">
+                                            <v-row >
+                                                <v-col class="pa-1 ma-0">
+                                                    <v-avatar>
+                                                        <v-img v-bind:src="'img/fanion/'+item.displayDom.fanion" :alt="item.displayDom.nomCourt" max-height="25" max-width="25"/>
+                                                    </v-avatar>{{ item.displayDom.nomCourt }}
+                                                </v-col>
+                                                <v-col class="pa-4 ma-0">
+                                                    <v-chip color="grey" ><h6 class="display-1 mb-1 font-weight-bold">{{ item.score }}</h6></v-chip>
+                                                </v-col>
+                                                <v-col class="pa-1 ma-0">
+                                                    <v-avatar>
+                                                        <v-img v-bind:src="'img/fanion/'+item.displayExt.fanion" :alt="item.displayExt.nomCourt" max-height="25" max-width="25"/>
+                                                    </v-avatar>{{ item.displayExt.nomCourt }}
+                                                </v-col>
+                                            </v-row>
+                                        </v-container>
+                                    </v-card-text>
+                                </v-card>
+                            </v-timeline-item>
+                        </v-timeline>
+                    </v-card-text>
+                </v-card>
+            </v-col>
+            </v-row>
+            </v-container>
+            </v-tab-item>
+    </v-tabs>
+    </v-card>
 </template>
 
 
@@ -199,6 +200,20 @@ export default {
                     this.lesmatchs[n].displayDom = this.lesequipeskey[this.lesmatchs[n].equipeDom.id]
                     this.lesmatchs[n].displayExt = this.lesequipeskey[this.lesmatchs[n].equipeExt.id]
                     this.lesmatchs[n].categorie = this.lesmatchs[n].categorie_id + " / Poule " + this.lesmatchs[n].poule
+
+                    if (this.lesmatchs[n].cat_code=="cat1") {
+                        if (this.lesmatchs[n].poule=="PA") {
+                            this.lesmatchs[n].color = "colorPA"
+                        } else {
+                            this.lesmatchs[n].color = "colorPB"
+                        }
+                    } else {
+                        if (this.lesmatchs[n].poule=="PA") {
+                            this.lesmatchs[n].color = "colorPC"
+                        } else {
+                            this.lesmatchs[n].color = "colorPD"
+                        }
+                    }
                   }
                 }).catch(error => {
                    console.log(error)
@@ -226,6 +241,13 @@ export default {
                         this.lesmatchs_c1_final[n].displayExt = blancEquipe
 
                     this.lesmatchs_c1_final[n].categorie = this.c1_categorie
+
+                    if (this.lesmatchs_c1_final[n].cat_code=="cat1") {
+                        this.lesmatchs_c1_final[n].color = "colorF1"
+                    } else {
+                        this.lesmatchs_c1_final[n].color = "colorF2"
+                    }
+
                   }
                 }).catch(error => {
                    console.log(error)
@@ -239,14 +261,14 @@ export default {
             for (var n in lesmatchs) {
                 lesmatchs[n].keytime = lesmatchs[n].heureDebut.replace(":", "")
             }
-            return lesmatchs.sort((p1, p2) => (p1.keytime > p2.keytime) ? 1 : (p1.keytime < p2.keytime) ? -1 : (p1.id > p2.id) ? 1 :(p1.id < p2.id) ? -1 : 0)
+            return lesmatchs.sort((p1, p2) => (p1.keytime > p2.keytime) ? 1 : (p1.keytime < p2.keytime) ? -1 : (parseInt(p1.id) > parseInt(p2.id)) ? 1 :(parseInt(p1.id) < parseInt(p2.id)) ? -1 : 0)
         },
         getMatchsFinales() {
             var lesmatchs = this.lesmatchs_c1_final
             for (var n in lesmatchs) {
                 lesmatchs[n].keytime = lesmatchs[n].heureDebut.replace(":", "")
             }
-            return lesmatchs.sort((p1, p2) => (p1.keytime > p2.keytime) ? 1 : (p1.keytime < p2.keytime) ? -1 : (p1.id > p2.id) ? 1 :(p1.id < p2.id) ? -1 : 0)
+            return lesmatchs.sort((p1, p2) => (p1.keytime > p2.keytime) ? 1 : (p1.keytime < p2.keytime) ? -1 : (parseInt(p1.id) > parseInt(p2.id)) ? 1 :(parseInt(p1.id) < parseInt(p2.id)) ? -1 : 0)
         },
     }
 };
