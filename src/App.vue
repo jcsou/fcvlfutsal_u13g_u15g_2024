@@ -8,7 +8,7 @@
         <!-- Start of app toolbar -->
         <v-toolbar >
           <v-toolbar-title class="display1 text-uppercase">
-                FCVL Futsal 13G/U15G 2024
+                FCVL Futsal U13G/U15G 2024
           </v-toolbar-title>
 
           <v-spacer></v-spacer>

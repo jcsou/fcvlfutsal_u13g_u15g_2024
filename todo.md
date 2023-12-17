@@ -1,11 +1,12 @@
 
-vue create fcvlfutsal_u13fu15f_2024
+vue create fcvlfutsal_u13g_u15g_2024
 >> Chose Vue2
 
-cd fcvlfutsal_u13fu15f_2024
+cd fcvlfutsal_u13g_u15g_2024
 vue add vuetify
 >> chose vuetify 2
 vue add router
+>> ? Use history mode for router > yes
 
 yarn upgrade vuetify@2.6.13
 yarn add vuex@3.6.2

@@ -120,13 +120,16 @@
                         <template v-slot:default>
                         <thead>
                           <tr>
-                            <th width="5%" class="text-center">
+                            <th width="3%" class="text-center">
                               N°
+                            </th>
+                            <th width="3%" class="text-center">
+                              Poule
                             </th>
                             <th width="10%" class="text-center">
                               Fanion
                             </th>
-                            <th width="85%" class="text-left">
+                            <th width="84%" class="text-left">
                               Club
                             </th>
                           </tr>
@@ -134,6 +137,7 @@
                         <tbody>
                           <tr v-for="(equipe, n) in equipes1" :key="equipe.id">
                             <td>{{n+1}}</td>
+                            <td>{{equipe.poule}}</td>
                             <td><v-img  v-bind:src="'img/fanion/'+equipe.fanion" max-height="30" max-width="30"/></td>
                             <td>{{equipe.nom}}<v-spacer></v-spacer></td>
                           </tr>
@@ -168,21 +172,25 @@
                       <v-simple-table>
                         <template v-slot:default>
                         <thead>
-                          <tr>
-                            <th width="5%" class="text-center">
-                              N°
-                            </th>
-                            <th width="10%" class="text-center">
-                              Fanion
-                            </th>
-                            <th width="85%" class="text-left">
-                              Club
-                            </th>
-                          </tr>
+                           <tr>
+                             <th width="3%" class="text-center">
+                               N°
+                             </th>
+                             <th width="3%" class="text-center">
+                               Poule
+                             </th>
+                             <th width="10%" class="text-center">
+                               Fanion
+                             </th>
+                             <th width="84%" class="text-left">
+                               Club
+                             </th>
+                           </tr>
                         </thead>
                         <tbody>
                           <tr v-for="(equipe, n) in equipes2" :key="equipe.id">
                             <td>{{n+1}}</td>
+                            <td>{{equipe.poule}}</td>
                             <td><v-img  v-bind:src="'img/fanion/'+equipe.fanion" max-height="30" max-width="30"/></td>
                             <td>{{equipe.nom}}<v-spacer></v-spacer></td>
                           </tr>
